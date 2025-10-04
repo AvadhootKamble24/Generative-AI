@@ -10,7 +10,7 @@ This repository is my personal chronicle as I dive deep into Generative AI. It c
 
 ## 📂 Repository Structure
 
-
+**/README.md/**
 ## 🧠 Key Areas of Focus
 
 While the field is vast, my current learning is focused on the following areas:
