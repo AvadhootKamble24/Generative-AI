@@ -10,7 +10,12 @@ This repository is my personal chronicle as I dive deep into Generative AI. It c
 
 ## 📂 Repository Structure
 
-**/README.md/**
+├── README.md               # You are here! The main overview of the entire repository.
+├── requirements.txt
+├── Research Paper Summarizer
+    ├── prompt_generator.py
+    ├── prompt_ui.py
+
 ## 🧠 Key Areas of Focus
 
 While the field is vast, my current learning is focused on the following areas:
