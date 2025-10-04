@@ -9,36 +9,12 @@ This repository is my personal chronicle as I dive deep into Generative AI. It c
 ---
 
 ## 📂 Repository Structure
-Of course. It looks like the text isn't being treated as pre-formatted, causing the alignment to break.
-
-To fix this and make it look like a proper directory tree, you need to wrap the entire structure inside a **markdown code block**. This tells the markdown renderer to preserve all the spaces and characters exactly as you typed them.
-
-### Corrected Code Block
-
-Copy the entire block below (including the triple backticks \`\`\` at the start and end) and paste it into your `README.md` file.
-
-```markdown
 ```
-
-.
-├── README.md
+├── README.md               # You are here! The main overview of the entire repository.
 ├── requirements.txt
-└── Research\_Paper\_Summarizer/
-├── prompt\_generator.py
-└── prompt\_ui.py
-
-```
-```
-
-This will render as a clean, properly aligned directory structure, like this:
-
-```
-.
-├── README.md
-├── requirements.txt
-└── Research_Paper_Summarizer/
-    ├── prompt_generator.py
-    └── prompt_ui.py
+├── Research Paper Summarizer
+|    ├── prompt_generator.py
+|   ├── prompt_ui.py
 ```
 ## 🧠 Key Areas of Focus
 
