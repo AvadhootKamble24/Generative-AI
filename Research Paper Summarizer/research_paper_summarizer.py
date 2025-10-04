@@ -5,10 +5,10 @@ from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import load_prompt
 
-# ✅ Load environment variables
+#Load environment variables
 load_dotenv()
 
-# ✅ Initialize model directly (no nested ChatOpenAI)
+#Initialize model
 llm = ChatOpenAI(
     model="deepseek/deepseek-chat-v3.1:free",        # OpenRouter free Grok model
     api_key=os.getenv("OPENROUTER_API_KEY"),
@@ -17,7 +17,7 @@ llm = ChatOpenAI(
     max_tokens=500,                        # Increased to allow proper summaries
 )
 
-# ✅ Streamlit UI
+#Streamlit UI
 st.header("📚 Research Paper Summarizer (Grok-powered)")
 
 paper_ip = st.selectbox(
@@ -40,10 +40,10 @@ length_ip = st.selectbox(
     ["Short (1-2 paragraphs)", "Medium (3-5 paragraphs)", "Long (detailed explanation)"]
 )
 
-# ✅ Load your LangChain prompt (from template.json)
+#Load prompt
 template = load_prompt(r"D:\Programming\GitHub\Generative AI\Research Paper Summarizer\template.json")
 
-# ✅ On button click
+#On button click
 if st.button("Summarize"):
     chain = template | llm
     result = chain.invoke({
@@ -52,7 +52,7 @@ if st.button("Summarize"):
         "length_input": length_ip,
     })
 
-    # ✅ Extract assistant-only response if model outputs user/assistant tags
+    #Extract assistant-only response if model outputs user/assistant tags
     full_text = result.content
     assistant_only = re.split(r"<\|assistant\|>", full_text)
     if len(assistant_only) > 1:
