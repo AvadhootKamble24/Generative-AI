@@ -9,12 +9,12 @@ from langchain_core.prompts import load_prompt
 load_dotenv()
 
 #Initialize model
-llm = ChatOpenAI(
-    model="deepseek/deepseek-chat-v3.1:free",        # OpenRouter free Grok model
+model = ChatOpenAI(
+    model=os.getenv("OPENROUTER_MODEL"),   
     api_key=os.getenv("OPENROUTER_API_KEY"),
-    base_url="https://openrouter.ai/api/v1",  # Correct base URL
+    base_url="https://openrouter.ai/api/v1",  # Important: points to OpenRouter
     temperature=0.7,
-    max_tokens=500,                        # Increased to allow proper summaries
+    # max_tokens=400,
 )
 
 #Streamlit UI
@@ -45,7 +45,7 @@ template = load_prompt(r"D:\Programming\GitHub\Generative AI\Research Paper Summ
 
 #On button click
 if st.button("Summarize"):
-    chain = template | llm
+    chain = template | model
     result = chain.invoke({
         "paper_input": paper_ip,
         "style_input": style_ip,
