@@ -18,7 +18,7 @@ model = ChatOpenAI(
 )
 
 #Streamlit UI
-st.header("📚 Research Paper Summarizer (Grok-powered)")
+st.header("📚 Research Paper Summarizer")
 
 paper_ip = st.selectbox(
     "Select Research Paper Name",
