@@ -10,7 +10,7 @@ load_dotenv()
 
 #Initialize model
 model = ChatOpenAI(
-    model=os.getenv("OPENROUTER_MODEL"),   
+    model=os.getenv("OPENROUTER_MODEL"),   #nvidia/nemotron-nano-9b-v2
     api_key=os.getenv("OPENROUTER_API_KEY"),
     base_url="https://openrouter.ai/api/v1",  # Important: points to OpenRouter
     temperature=0.7,
