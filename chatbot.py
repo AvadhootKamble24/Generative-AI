@@ -57,7 +57,7 @@ while True:
     if not user_input.strip():
         continue
     
-    # Invoke chain with history (automatically loads and saves)
+    
     response = chain_with_history.invoke(
         {"query": user_input},
         config=config
